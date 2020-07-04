@@ -23,7 +23,7 @@
         </dependency>
         <dependency>
             <groupId>ru.commands</groupId>
-            <artifactId>library</artifactId>
+            <artifactId>interpreter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
