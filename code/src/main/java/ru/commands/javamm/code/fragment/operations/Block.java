@@ -1,7 +1,8 @@
-package ru.commands.javamm.code.fragment.operation;
+package ru.commands.javamm.code.fragment.operations;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 import ru.commands.javamm.code.fragment.Operation;
 import ru.commands.javamm.code.fragment.SourceLine;
 
@@ -38,7 +39,7 @@ public final class Block extends AbstractOperation {
         return stringBuilder.toString();
         */
         return operations.stream()
-            .map(Object::toString)
-            .collect(Collectors.joining(System.lineSeparator()));
+                .map(Object::toString)
+                .collect(Collectors.joining(System.lineSeparator()));
     }
 }

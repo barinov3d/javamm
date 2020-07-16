@@ -1,6 +1,7 @@
-package ru.commands.javamm.code.fragment.operation;
+package ru.commands.javamm.code.fragment.operations;
 
 import static java.util.Objects.requireNonNull;
+
 import ru.commands.javamm.code.fragment.Operation;
 import ru.commands.javamm.code.fragment.SourceLine;
 

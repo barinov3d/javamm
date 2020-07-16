@@ -1,13 +1,12 @@
-package ru.commands.javamm.code.fragment.operation;
+package ru.commands.javamm.code.fragment.operations;
 
 import static java.util.Objects.requireNonNull;
-import lombok.Getter;
+
 import ru.commands.javamm.code.fragment.SourceLine;
 
 /**
  * @author Dmitry Barinov
  */
-@Getter
 public class PrintlnOperation extends AbstractOperation {
 
     private final String text;
@@ -15,5 +14,9 @@ public class PrintlnOperation extends AbstractOperation {
     public PrintlnOperation(final SourceLine sourceLine, final String text) {
         super(sourceLine);
         this.text = requireNonNull(text);
+    }
+
+    public String getText() {
+        return text;
     }
 }

@@ -2,15 +2,14 @@ package ru.commands.javamm.code.fragment;
 
 import java.util.List;
 import java.util.Objects;
+
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
-import lombok.Getter;
 
 /**
  * @author Dmitry Barinov
  */
 
-@Getter
 public class SourceLine implements CompiledCodeFragment, Comparable<SourceLine> {
 
     public static final SourceLine EMPTY_SOURCE_LINE = new SourceLine("<UNDEFINED>", 0, List.of());
@@ -70,7 +69,7 @@ public class SourceLine implements CompiledCodeFragment, Comparable<SourceLine> 
     public boolean equals(final Object o) {
         final SourceLine that = (SourceLine) o;
         return getNumber() == that.getNumber() &&
-            getModuleName().equals(that.getModuleName());
+                getModuleName().equals(that.getModuleName());
     }
 
     @Override
@@ -91,5 +90,17 @@ public class SourceLine implements CompiledCodeFragment, Comparable<SourceLine> 
     @Override
     public String toString() {
         return format("[%s:%s] -> %s", moduleName, number, getCommand());
+    }
+
+    public String getModuleName() {
+        return moduleName;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public List<String> getTokens() {
+        return tokens;
     }
 }
