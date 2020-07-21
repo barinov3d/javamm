@@ -103,4 +103,8 @@ public class SourceLine implements CompiledCodeFragment, Comparable<SourceLine> 
     public List<String> getTokens() {
         return tokens;
     }
+
+    public String getToken(int i) {
+        return tokens.get(i);
+    }
 }
